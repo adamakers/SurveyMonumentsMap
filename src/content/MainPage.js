@@ -1,1 +1,11 @@
-import {}
+import { Row, Col } from 'reactstrap';
+import Hero from '../components/Hero';
+
+
+const MainPage = () => {
+  return (
+    <Hero />
+  )
+}
+
+export default MainPage;

@@ -15,7 +15,7 @@ const Header = () => {
       </NavbarBrand>
       <NavbarToggler onClick={toggleNavbar} className='me-2' />
       <Collapse isOpen={!collapsed} navbar>
-        <Nav navbar>
+        <Nav className='ms-auto' navbar>
           <NavItem>
             <NavLink href='#'>
               Go Map!
