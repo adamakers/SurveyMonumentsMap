@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body,
+input,
+a,
+button {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+/* NAVBAR */
+
+
+/* HERO */
+.hero {
+  background: #051923 url(.//assets/photos/topography.svg);
+  height: calc(100vh);
+  color: #fff;
+}

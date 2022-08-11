@@ -9,7 +9,7 @@ const Header = () => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <Navbar className='p-4' color='primary' sticky='top' expand='md' dark>
+    <Navbar className='p-4' color='primary' fixed='top' expand='md' dark>
       <NavbarBrand href='/'>
         Working Title
       </NavbarBrand>
