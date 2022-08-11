@@ -10,7 +10,7 @@ button {
 .hero,
 #map,
 #contact {
-  padding-top: 88px;
+  margin-top: 88px;
 }
 
 /* NAVBAR */
@@ -19,13 +19,22 @@ button {
 /* HERO */
 .hero {
   background: #051923 url(.//assets/photos/topography.svg);
-  height: calc(100vh);
+  height: calc(100vh - 88px);
   color: #fff;
 }
 
 /* MAP */
 
+.map-page-content {
+  display: flex;
+}
+
 #map {
-  height: 100vh;
-  width: 100%;
+  height: calc(100vh - 88px);
+  /* width: 100%; */
+}
+
+.sidebar {
+  background-color: green;
+  height: 100%;
 }
