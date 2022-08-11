@@ -7,6 +7,12 @@ button {
   font-family: 'Lexend Deca', sans-serif;
 }
 
+.hero,
+#map,
+#contact {
+  padding-top: 88px;
+}
+
 /* NAVBAR */
 
 
@@ -15,4 +21,11 @@ button {
   background: #051923 url(.//assets/photos/topography.svg);
   height: calc(100vh);
   color: #fff;
+}
+
+/* MAP */
+
+#map {
+  height: 600px;
+  width: 600px;
 }

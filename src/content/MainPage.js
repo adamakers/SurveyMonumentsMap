@@ -1,6 +1,4 @@
-import { Row, Col } from 'reactstrap';
 import Hero from '../components/Hero';
-
 
 const MainPage = () => {
   return (

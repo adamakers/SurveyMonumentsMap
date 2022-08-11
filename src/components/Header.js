@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
+import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 
 const Header = () => {
@@ -17,12 +18,12 @@ const Header = () => {
       <Collapse isOpen={!collapsed} navbar>
         <Nav className='ms-auto' navbar>
           <NavItem>
-            <NavLink href='#'>
+            <NavLink className='nav-link' to='/map'>
               Go Map!
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href='#'>
+            <NavLink className='nav-link' to='/contact'>
               Contact
             </NavLink>
           </NavItem>
