@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
+/* GENERAL STYLES */
 body,
 input,
 a,
@@ -9,32 +10,74 @@ button {
 
 .hero,
 #map,
-#contact {
+#contact,
+.sidebar {
   margin-top: 88px;
+  height: calc(100vh - 88px);
 }
 
 /* NAVBAR */
 
-
 /* HERO */
 .hero {
   background: #051923 url(.//assets/photos/topography.svg);
-  height: calc(100vh - 88px);
   color: #fff;
 }
 
 /* MAP */
 
-.map-page-content {
-  display: flex;
-}
-
 #map {
-  height: calc(100vh - 88px);
-  /* width: 100%; */
+  position: relative;
+  height: calc(50vh - 88px);
 }
 
-.sidebar {
-  background-color: green;
-  height: 100%;
+.coords-box {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #000;
+  height: 40px;
+  z-index: 9999;
+  padding: 10px 30px;
+  background-color: #26547C;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.sidebar-container {
+ background-color: red;
+}
+
+@media (min-width: 768px) {
+
+  #map {
+    height: calc(100vh - 88px);
+  }
+
+
+  .sidebar-container {
+    background-color: green;
+    width: 320px;
+    padding-top: 88px;
+   }
+
+}
+
+@media (min-width: 1200px) {
+  
+  .sidebar-container {
+    background-color: yellow;
+    width: 430px;
+   }
+
+}
+
+@media (min-width: 1500px) {
+  
+  .sidebar-container {
+    background-color: blue;
+    width: 520px;
+   }
+
 }
