@@ -1,12 +1,18 @@
-import { Button, FormGroup, Label, Input, Row, Col } from 'reactstrap';
+import { Button, FormGroup, Label, Row, Col } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik'; 
 import { useState } from 'react';
 
 
 const MapSidebar = () => {
+
+  const handleSubmit = () => { 
+    console.log('The form has been submitted');
+  }
+
+
   return (
     <div className='sidebar-container text-light px-4'>
-      <h3 className='text-center my-5'>Monument Points</h3>
+      <h3 className='text-center my-5'>Survey Points</h3>
       {/* Search bar and button */}
 
       <Formik
@@ -16,77 +22,95 @@ const MapSidebar = () => {
           gps: true,
           classHorz: true,
           vertCont: true,
-          approxHt: true,
-          gpsVert: true,
-          gpsApprox: true,
-          classHorzVert: true,
-          classHorzApprox: true
+          approxHt: true
         }}
-        // onSubmit={handleSubmit} // handler to pull the data
+        onSubmit={handleSubmit} // handler to pull the data
         // validate={validateLatLng}
       >
         <Form>
-          <FormGroup>
-            <Input
-              id="latLngInp"
-              name="latLng"
-              placeholder="Enter a lat and lon"
-              type="text"
-              />
-          </FormGroup>
+          <Col md='12'>
+            <FormGroup>
+              <Field
+                name="latLng"
+                placeholder="Enter a lat and lon"
+                className='form-control'
+                />
+            </FormGroup>
+
+          </Col>
           <Row>
-            <Col sm='6' lg='4'>
+            <Col sm='6' xl='4'>
               <FormGroup check>
-                <Input type="checkbox" id='cors' />
-                {' '}
-                <Label htmlFor='cors' check>
+                <Label check>
+                  <Field
+                  type="checkbox"
+                  name='cors'
+                  className='form-check-input'
+                  />
+                  {' '}
                   CORS
                 </Label>
               </FormGroup>
             </Col>
-            <Col sm='6' lg='4'>
+            <Col sm='6' xl='4'>
               <FormGroup check>
-                <Input type="checkbox" id='gps'/>
-                {' '}
-                <Label htmlFor='gps' check>
+                <Label check>
+                  <Field
+                  type="checkbox"
+                  name='gps'
+                  className='form-check-input'
+                  />
+                  {' '}
                   GPS Site
                 </Label>
               </FormGroup>
             </Col>
-            <Col sm='6' lg='4'>
+            <Col sm='6' xl='4'>
               <FormGroup check>
-                <Input type="checkbox" id='classicHorz'/>
-                {' '}
-                <Label htmlFor='classicHorz' check>
+                <Label check>
+                  <Field
+                  type="checkbox"
+                  name='classHorz'
+                  className='form-check-input'
+                  />
+                  {' '}
                   Classic Horiz
                 </Label>
               </FormGroup>
             </Col>
           </Row>
           <Row>
-            <Col sm='6' lg='4'>
+            <Col md='6' xl='4'>
               <FormGroup check>
-                <Input type="checkbox" id='vertHorz'/>
-                {' '}
-                <Label htmlFor='vertHorz' check>
+                <Label check>
+                  <Field
+                  type="checkbox"
+                  name='vertCont'
+                  className='form-check-input'
+                  />
+                  {' '}
                   Vertical Control
                 </Label>
               </FormGroup>
             </Col>
-            <Col sm='6' lg='4'>
+            <Col sm='6' xl='4'>
               <FormGroup check>
-                <Input type="checkbox" id='approxHt'/>
-                {' '}
-                <Label htmlFor='approxHt' check>
+                <Label check>
+                  <Field
+                  type="checkbox"
+                  name='approxHt'
+                  className='form-check-input'
+                  />
+                  {' '}
                   Approx. Height
                 </Label>
               </FormGroup>
             </Col>
           </Row>
-          
-          <Button>Find Points</Button>
+          <Row className='text-center'>
+            <Button type='submit' color='primary' className='mt-4'>Find Points</Button>
+          </Row>
         </Form>
-        
       </Formik>
       {/* Filter points */}
       {/* cards for all the returned points */}

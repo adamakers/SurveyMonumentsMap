@@ -8,6 +8,11 @@ button {
   font-family: 'Lexend Deca', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: red;
+}
+
 .hero,
 #map,
 #contact,
