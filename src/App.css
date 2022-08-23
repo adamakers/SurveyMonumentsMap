@@ -8,11 +8,6 @@ button {
   font-family: 'Lexend Deca', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: red;
-}
-
 .hero,
 #map,
 #contact,
@@ -51,7 +46,7 @@ a {
 }
 
 .sidebar-container {
- background-color: red;
+ background-color: #26547C;
 }
 
 @media (min-width: 768px) {
@@ -62,7 +57,7 @@ a {
 
 
   .sidebar-container {
-    background-color: green;
+    /* background-color: green; */
     width: 320px;
     padding-top: 88px;
    }
@@ -72,7 +67,7 @@ a {
 @media (min-width: 1200px) {
   
   .sidebar-container {
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 430px;
    }
 
@@ -81,7 +76,7 @@ a {
 @media (min-width: 1500px) {
   
   .sidebar-container {
-    background-color: blue;
+    /* background-color: blue; */
     width: 520px;
    }
 
